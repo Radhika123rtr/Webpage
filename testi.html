@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>An online Cafe | </title>
+        <!--Linking Font Awesome for icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <!--Linking Swiper CSS-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="style.css">
+         
+        <style>
+     .animation-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      opacity: 0;  /* Initially hidden */
+      animation: runFallDisappear 3s ease-in-out infinite; /* Adjusted timing for smoother animation */
+      z-index: 9999; /* Ensures the bunny stays on top of other elements */
+    }
+
+    /* Bunny image size and smoothness */
+    .bunny-img {
+      width: 120px; /* Increased size for better visibility */
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); /* Adds a shadow to make it pop */
+    }
+
+    /* Keyframe animation for bunny movement */
+    @keyframes runFallDisappear {
+      0% {
+        opacity: 0;
+        transform: translateX(0) translateY(0); /* Start position (invisible) */
+      }
+      25% {
+        opacity: 1;
+        transform: translateX(30px) translateY(-30px); /* Bunny moves slightly up and right */
+      }
+      50% {
+        opacity: 1;
+        transform: translateX(80px) translateY(-100px); /* Jump (falling animation) */
+      }
+      75% {
+        opacity: 1;
+        transform: translateX(130px) translateY(0); /* Bunny lands */
+      }
+      100% {
+        opacity: 0; /* Fading out */
+        transform: translateX(180px) translateY(20px); /* Disappears and drops lower */
+      }
+    }
+
+</style>
+        
+        
+</head>
+<body>
+
+<div class="animation-box">
+        <img src="images\bean.png" alt="Bunny" class="bunny-img">
+      </div>
+ <!-- header/Navbar-->
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">☕ Snack Verse</h2>
+            </a>
+            <ul class="nav-menu">
+               <button id="menu-close-button" class="fas fa-times"></button> 
+
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button> 
+        </nav>
+    </header>
+    <main>
+    <!--Testimonials section-->
+<section class="testimonials-section" id="testimonials">
+    <h2 class="section-title">Testimonials</h2>
+    <div class="section-content">
+        <div class="slider-container swiper">
+            <div class="slider-wrapper">
+                <ul class="testimonials-list swiper-wrapper">
+                    <li class="testimonial swiper-slide">
+                        <img src="images\bOy3.jpg" alt="User" class="user-image">
+                        <h3 class="name">Min-jun</h3>
+                        <i class="feedback">“The iced Americano was just right — smooth and bold. Loved the cozy interior, it reminded me of cafés back in Seoul. The bulgogi-style burger? So good!”</i>
+                    </li>
+                    <li class="testimonial swiper-slide">
+                        <img src="images\giRl3.jpeg" alt="User" class="user-image">
+                        <h3 class="name">Emma</h3>
+                        <i class="feedback">Tried the special combo with a vanilla shake — everything was delicious. Super friendly vibe and the décor is totally Insta-worthy. Will definitely come again!”</i>
+                    </li>
+                    <li class="testimonial swiper-slide">
+                        <img src="images\boy2.jpg" alt="User" class="user-image">
+                        <h3 class="name">Arjun</h3>
+                        <i class="feedback">“Masala fries were on point! The combo meal was super satisfying. Great place to hang out or study — chill vibes all around. Oreo shake was a personal favorite!.”</i>
+                    </li>
+                    <li class="testimonial swiper-slide">
+                        <img src="images\girL2.jpg" alt="User" class="user-image">
+                        <h3 class="name">Ananya</h3>
+                        <i class="feedback">“Hot chocolate was amazing! Fries were crisp and delicious. Loved the comfy seating and eco-friendly packaging. A very inviting space.”</i>
+                    </li>
+                    <li class="testimonial swiper-slide">
+                        <img src="images\boy1.jpg" alt="User" class="user-image">
+                        <h3 class="name">Liam</h3>
+                        <i class="feedback">“The burger was juicy, and the caramel frappe hit the spot. Loved the ambient music and lighting. A perfect place to unwind after classes.”</i>
+                    </li>
+                    <li class="testimonial swiper-slide">
+                        <img src="images\girl1.jpg" alt="User" class="user-image">
+                        <h3 class="name">Soo-ah</h3>
+                        <i class="feedback">“Strawberry milkshake and tiramisu combo made my day! The fairy lights and soft music created the perfect cozy corner. Felt like a little escape!.”</i>
+                    </li>
+
+                </ul>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slide-button
+                swiper-button-prev"></div>
+                <div class="swiper-slide-button
+                swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Linking Swiper script-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!--Linking custom script-->
+
+<script src="script.js"></script>
+
+</body>
+</html>
+

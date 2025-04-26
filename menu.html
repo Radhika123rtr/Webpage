@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>An online Cafe | </title>
+        <!--Linking Font Awesome for icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <!--Linking Swiper CSS-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="style.css">
+        
+          
+        <style>
+     .animation-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      opacity: 0;  /* Initially hidden */
+      animation: runFallDisappear 3s ease-in-out infinite; /* Adjusted timing for smoother animation */
+      z-index: 9999; /* Ensures the bunny stays on top of other elements */
+    }
+
+    /* Bunny image size and smoothness */
+    .bunny-img {
+      width: 120px; /* Increased size for better visibility */
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); /* Adds a shadow to make it pop */
+    }
+
+    /* Keyframe animation for bunny movement */
+    @keyframes runFallDisappear {
+      0% {
+        opacity: 0;
+        transform: translateX(0) translateY(0); /* Start position (invisible) */
+      }
+      25% {
+        opacity: 1;
+        transform: translateX(30px) translateY(-30px); /* Bunny moves slightly up and right */
+      }
+      50% {
+        opacity: 1;
+        transform: translateX(80px) translateY(-100px); /* Jump (falling animation) */
+      }
+      75% {
+        opacity: 1;
+        transform: translateX(130px) translateY(0); /* Bunny lands */
+      }
+      100% {
+        opacity: 0; /* Fading out */
+        transform: translateX(180px) translateY(20px); /* Disappears and drops lower */
+      }
+    }
+
+</style> 
+        
+        
+</head>
+<body>
+<div class="animation-box">
+        <img src="images\bean.png" alt="Bunny" class="bunny-img">
+      </div>
+
+
+ <!-- header/Navbar-->
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">☕ Snack Verse</h2>
+            </a>
+            <ul class="nav-menu">
+               <button id="menu-close-button" class="fas fa-times"></button> 
+
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="testi.html" class="nav-link">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button> 
+        </nav>
+    </header>
+    <main>
+    <!--Menu Section-->
+<section class="menu-section" id="menu">
+    <h2 class="section-title">Our Menu</h2>
+    <div class="section-content">
+        <ul class="menu-list">
+            <li class="menu-item">
+                <img src="images\hot beverages.jpg" alt="Hot Beverages" class="menu-image">
+                <h3 class="name">Hot Beverages</h3>
+                <p class="text">Wide range of steaming hot coffee to make you fresh and light.</p>
+            </li>
+            <li class="menu-item">
+                <img src="images\cold beverages.jpg" alt="Cold Beverages" class="menu-image">
+                <h3 class="name">Cold Beverages</h3>
+                <p class="text">Creamy and frothy cold coffee to make you cool.</p>
+            </li>
+            <li class="menu-item">
+                <img src="images\refresh2.jpg" alt="Refreshment" class="menu-image">
+                <h3 class="name">Refreshment</h3>
+                <p class="text">Fruit and icy refreshing drink to make feel refresh.</p>
+            </li>
+            <li class="menu-item">
+                <img src="images\food2.jpg" alt="Special Combos" class="menu-image">
+                <h3 class="name">Special Combos</h3>
+                <p class="text">Your favorite eating and drinking combination.</p>
+            </li>
+            <li class="menu-item">
+                <img src="images\cake.jpg" alt="Dessert" class="menu-image">
+                <h3 class="name">Dessert</h3>
+                <p class="text">Satiate your palate and take you on a culinary treat.</p>
+            </li>
+            <li class="menu-item">
+                <img src="images\burger.jpg" alt="burger & French Fries" class="menu-image">
+                <h3 class="name">Burger & French Fries</h3>
+                <p class="text">Quick bites to satisfy your small size hunger.</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+ </main>
+
+<!--Linking Swiper script-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!--Linking custom script-->
+
+<script src="script.js"></script>
+
+</body>
+</html>
